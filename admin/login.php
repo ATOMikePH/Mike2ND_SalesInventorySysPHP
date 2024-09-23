@@ -3,33 +3,6 @@
 <html lang="en" class="" style="height: auto;">
  <?php require_once('inc/header.php') ?>
 <body class="hold-transition login-page dark-mode">
-<div id="loader" class="loader"></div>
-  <script>
-    start_loader()
-  </script>
-
-<style>
-  .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -60px; /* Half of height */
-    margin-left: -60px; /* Half of width */
-    z-index: 9999; /* Ensure it stays on top */
-    display: none; /* Hide initially */
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-</style>
 
   <style>
     body {
@@ -89,9 +62,6 @@
       border-color: #0056b3;
     }
 
-    .logo-container {
-      margin-bottom: 20px; 
-    }
     
     @keyframes fadeInOut {
   0% {
@@ -113,10 +83,10 @@
             text-align: center;
         }
 
-        /* New style for centering button */
+      
         .center-content .btn-primary {
             display: inline-block;
-            margin-top: 10px; /* Adjust margin as needed */
+            margin-top: 10px; 
         }
 
         .login-box .user-box {
@@ -185,12 +155,7 @@ box-shadow:  -20px -20px 60px #101010,
   position: absolute;
   display: block;
 }
-.logo  {width: 45%; position: relative; left: 29%;
-filter: drop-shadow(5px 5px 15px #222); padding-bottom: 35px; cursor: pointer;}
 
-input{
-  caret-color: greenyellow;
-}
 </style> 
   
 
@@ -198,7 +163,6 @@ input{
     <div class="card-primary">
     <div class="text-center">
     <div class="logo-container">
-    <img src="<?php echo validate_image($_settings->info('logo'))?>" alt="Store Logo" class="brand-image img-circle elevation-3 bg-black" style="animation: fadeInOut 5s infinite; width: 6rem;height: 6em;max-height: unset ">
   </div>
   <hr>
         <h2 class="h2"><b class="fas fa-lock"> Secured Login</b></h2>
@@ -233,11 +197,6 @@ input{
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.min.js"></script>
 
-  <script>
-    $(document).ready(function(){
-      end_loader();
-    })
-  </script>
 
 
 </body>
